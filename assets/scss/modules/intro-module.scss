@@ -1,0 +1,118 @@
+.intro-module {
+    padding: 45px 0;
+
+    .intro-module__image {
+        margin-bottom: 30px;
+
+        img {
+            border-radius: 6px;
+        }
+    }
+
+    .intro-module__content {
+
+        .intro-module__content__subline {
+            color: $color-orange;
+            font-size: rem(16px);
+            font-weight: $font-weight-medium;
+            line-height: rem(32px);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .intro-module__content__headline {
+            padding: 0;
+            margin-bottom: 30px;
+            font-size: rem(56px);
+            font-weight: $font-weight-extrabold;
+            line-height: rem(64px);
+            letter-spacing: -1px;
+        }
+
+        .intro-module__content__text {
+            padding: 0;
+            margin-bottom: 15px;
+            color: $color-lightgrey;
+            font-size: rem(16px);
+            line-height: rem(32px);
+        }
+
+        .button {
+            font-size: rem(14px);
+            font-weight: $font-weight-heavy;
+            text-transform: uppercase;
+        }
+    }
+}
+
+// IMPORTANT: margin-bottom is always -10px than usually in design
+
+@include viewport(mw){
+    .intro-module {
+        padding: 60px 0;
+
+        .grid-wrap {
+            align-items: center;
+        }
+
+        .intro-module__image {
+            margin-bottom: 0;
+        }
+
+        .intro-module__content {
+
+            .intro-module__content__subline {
+
+            }
+
+            .intro-module__content__headline {
+                margin-bottom: 25px;
+                font-size: rem(64px);
+                line-height: rem(72px);
+                letter-spacing: -1.5px;
+
+            }
+
+            .intro-module__content__text {
+                padding-right: 20%;
+                margin-bottom: 20px;
+            }
+
+            .button {
+
+            }
+        }
+    }
+}
+
+@include viewport(lw){
+    .intro-module {
+        padding: 75px 0;
+
+        .intro-module__image {
+
+        }
+
+        .intro-module__content {
+
+            .intro-module__content__subline {
+
+            }
+
+            .intro-module__content__headline {
+                margin-bottom: 20px;
+                font-size: rem(72px);
+                line-height: rem(80px);
+                letter-spacing: -2px;
+            }
+
+            .intro-module__content__text {
+
+            }
+
+            .button {
+
+            }
+        }
+    }
+}

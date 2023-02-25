@@ -1,0 +1,15 @@
+node_modules
+*.log*
+.nitro
+.cache
+.output
+/.env
+dist
+/public/robots.txt
+
+# Certificates
+/localhost-key.pem
+/localhost.pem
+
+# IDE / Editor
+.idea

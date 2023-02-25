@@ -1,0 +1,19 @@
+.image {
+    padding: 70px 0 35px;
+
+    img {
+        border-radius: 6px;
+    }
+}
+
+@include viewport(mw){
+    .image {
+        padding: 70px 0 55px;
+    }
+}
+
+@include viewport(lw){
+    .image {
+        padding: 70px 0 75px;
+    }
+}

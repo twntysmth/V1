@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="90px" height="90px" viewBox="0 0 90 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_placeholder</title>
+    <defs>
+        <circle id="path-1" cx="45" cy="45" r="45"></circle>
+    </defs>
+    <g id="Module" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1440_Subnavigation" transform="translate(-229.000000, -389.000000)">
+            <g id="Group" transform="translate(191.000000, 145.000000)">
+                <g id="Group-2" transform="translate(0.000000, 224.000000)">
+                    <g id="icon_placeholder" transform="translate(38.000000, 20.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                        <path d="M45,27.618034 L61.531232,39.6286771 L55.2168633,59.0623059 L34.7831367,59.0623059 L28.468768,39.6286771 L45,27.618034 Z" id="Polygon" stroke="#7AB51D" mask="url(#mask-2)"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

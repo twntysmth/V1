@@ -1,0 +1,42 @@
+.vcp {
+  overflow: hidden;
+
+  &.vcp--expanded {
+    .vcp__header {
+
+      .vcp__header-icon {
+
+        &::before {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  .vcp__header {
+    position: relative;
+    cursor: pointer;
+
+    .vcp__header-icon {
+      position: absolute;
+      top: 5px;
+      right: 0;
+
+      &::before {
+        display: block;
+        width: 20px;
+        height: 11px;
+        background-image: url(/img/icons/chevron-down.svg);
+        background-size: cover;
+        transition: transform linear $transitionTime;
+        content: "";
+      }
+
+      svg {
+        display: none;
+      }
+    }
+  }
+  .vcp__body {
+    transition: all linear $transitionTime;
+  }
+}

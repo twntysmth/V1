@@ -1,0 +1,193 @@
+/* -------------------------------------------------------- */
+/*        CONFIG DATA . FONTS, GENERALS and VARIABLES       */
+/* -------------------------------------------------------- */
+
+@use "sass:list";
+@use "sass:math";
+
+
+/* -------------------------------------------------------- */
+/*                   SET UP VIEWPORTS                       */
+/* -------------------------------------------------------- */
+
+$viewports: (
+    w:  0px,            /* mobile viewports starts here */
+    sw: 480px,
+    mw: 768px,          /* tablet viewports starts here */
+    lw: 1280px,         /* desktop viewports starts here */
+    xlw: 1440px
+);
+
+
+/* -------------------------------------------------------- */
+/*              GET THE VIEWPORTS AS STRING                 */
+/* -------------------------------------------------------- */
+
+$viewportsString: "";
+
+@each $current-viewport,  $current-viewportwidth in $viewports {
+    $viewportsString: $viewportsString + $current-viewport + ":" + $current-viewportwidth + ",";
+}
+
+
+/* -------------------------------------------------------- */
+/*                     DEFINE GRIDS                         */
+/* -------------------------------------------------------- */
+
+$grid: (
+    w: (
+        columns:                12,
+        column-gap:             10px,
+        row-gap:                0,
+        wrap-outer-padding:     10px
+    ),
+    sw: (
+        columns:                12,
+        column-gap:             10px,
+        row-gap:                0,
+        wrap-outer-padding:     10px
+    ),
+    mw: (
+        columns:                12,
+        column-gap:             30px,
+        row-gap:                0,
+        wrap-outer-padding:     10px
+    ),
+    lw: (
+        columns:                24,
+        column-gap:             30px,
+        row-gap:                0,
+        wrap-outer-padding:     20px
+    ),
+    xlw: (
+        columns:                24,
+        column-gap:             30px,
+        row-gap:                0,
+        wrap-outer-padding:     20px
+    )
+);
+
+$grid-wrap-max-width:           1440px;
+
+/* -------------------------------------------------------- */
+/*                 COLORSCHEME, DO IT!                      */
+/* -------------------------------------------------------- */
+
+// GENERAL COLORS
+$color-white:                  #FFF;
+$color-black:                  #000;
+
+$color-bluegrey:               #3a3c56;
+$color-darkgrey:               #282a36;
+
+$color-verylightgrey:          rgba(255, 255, 255, 0.29);
+$color-lightgrey:              rgba(255, 255, 255, 0.64);
+$color-purple:                 #b790f4;
+$color-orange:                 #ef6d58;
+
+// THEME COLORS
+
+// SOCIAL COLORS
+
+// SOCIAL COLORS ON HOVER
+
+// BACKGROUND COLORS
+$color-mainbackground:         #28293e;
+
+
+/* -------------------------------------------------------- */
+/*               GET FONT AND SET REM FUNCTION              */
+/* -------------------------------------------------------- */
+
+$font-size-main:			    16px;
+
+// GET REM FONTSIZE
+@function rem($font-size) {
+    $remSize: math.div($font-size, $font-size-main);
+    @return $remSize * 1rem;
+}
+
+
+/* -------------------------------------------------------- */
+/*                     FONT CONFIGS                         */
+/* -------------------------------------------------------- */
+
+
+$font-size-desktop:			                rem(20px);
+$font-size-tablet:			                rem(20px);
+$font-size-mobile:			                rem(14px);
+
+$font-line-height-default-mobile:	        1.71;
+$font-line-height-default-tablet:	        1.5;
+$font-line-height-default-desktop:	        1.5;
+
+$font-letter-spacing:                       0;
+
+$headline-line-height-mobile:               1.38;
+$headline-line-height-tablet:               1.28;
+$headline-line-height-desktop:              1.2;
+
+$font-size-h1-mobile:			            rem(35px);
+$font-size-h2-mobile:			            rem(26px);
+$font-size-h3-mobile:			            rem(18px);
+$font-size-h4-mobile:			            rem(17px);
+$font-size-h5-mobile:			            rem(16px);
+$font-size-h6-mobile:			            rem(14px);
+
+$font-size-h1-tablet:			            rem(50px);
+$font-size-h2-tablet:			            rem(36px);
+$font-size-h3-tablet:			            rem(24px);
+$font-size-h4-tablet:			            rem(22px);
+$font-size-h5-tablet:			            rem(21px);
+$font-size-h6-tablet:			            rem(20px);
+
+$font-size-h1-desktop:		                rem(70px);
+$font-size-h2-desktop:		                rem(50px);
+$font-size-h3-desktop:		                rem(24px);
+$font-size-h4-desktop:		                rem(22px);
+$font-size-h5-desktop:		                rem(21px);
+$font-size-h6-desktop:		                rem(20px);
+
+$font-weight-thin:			                100;
+$font-weight-extralight:			        200;
+$font-weight-light:			                300;
+$font-weight-normal:			            400;
+$font-weight-medium:		                500;
+$font-weight-semibold:		                600;
+$font-weight-bold:			                700;
+$font-weight-extrabold: 	                800;
+$font-weight-heavy:			                900;
+
+$font-family:			                    'Barlow', serif, sans-serif;
+$font-family-monospace:		                Consolas, "Lucida Console", Monaco, monospace;
+
+// FONT COLORS
+$font-color:                                $color-white;
+
+// LINK STYLES
+$font-link-color:				            $color-orange;
+$font-link-color-hover:		                $color-orange;
+$font-text-decoration:		                none;
+
+$transitionTime:                            0.3s;
+
+$headline-padding:                          5px;
+$text-paragraph-padding:                    5px;
+$list-element-padding:                      5px;
+
+/* -------------------------------------------------------- */
+/*                  Z-INDEX LEVEL RANKING                   */
+/* -------------------------------------------------------- */
+
+
+$z-index-0:                     1;
+$z-index-1:                     100;
+$z-index-2:                     200;
+$z-index-3:                     300;
+$z-index-4:                     400;
+$z-index-5:                     500;
+$z-index-6:                     600;
+$z-index-7:                     700;
+$z-index-8:                     800;
+$z-index-9:                     900;
+$z-index-10:                    999;

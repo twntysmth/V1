@@ -1,0 +1,54 @@
+.pagination {
+  @include flex();
+  justify-content: center;
+  padding-top: 0;
+  padding-bottom: 0;
+  list-style: none;
+
+  li {
+    margin-left: 5px;
+    margin-right: 5px;
+
+    &.current {
+      button {
+        background: $color-orange;
+        color: $color-white;
+        border-color: $color-orange;
+      }
+    }
+  }
+  .pagination__prev,
+  .pagination__next {
+    button {
+      background: transparent;
+      border-color: transparent;
+
+      &:hover {
+        border-color: $color-purple;
+        background: transparent;
+      }
+    }
+  }
+
+  button {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+    border: 1px solid $color-purple;
+    color: $color-purple;
+    background: transparent;
+    font-weight: $font-weight-normal;
+
+    &:hover {
+      background: $color-orange;
+      color: $color-white;
+      border-color: $color-orange;
+    }
+
+    svg {
+      position: relative;
+      top: 2px;
+    }
+  }
+}

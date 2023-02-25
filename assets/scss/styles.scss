@@ -1,0 +1,39 @@
+/* -------------------------------------------------------- */
+/*                     GLOBAL STYLES                        */
+/* -------------------------------------------------------- */
+
+/* -------------------------------------------------------- */
+/*                      PREPARATION                         */
+/* -------------------------------------------------------- */
+
+    @import "reset";
+    @import "general";
+    @import "grid";
+
+/* -------------------------------------------------------- */
+/*                        BASIS                             */
+/* -------------------------------------------------------- */
+
+    @import "base/site-header";
+    @import "base/site-footer";
+    @import "base/site-error";
+
+/* -------------------------------------------------------- */
+/*                       PARTIALS                           */
+/* -------------------------------------------------------- */
+
+    @import "partials/accordion";
+    @import "partials/slider";
+    @import "partials/modalbox";
+    @import "partials/pagination";
+
+/* -------------------------------------------------------- */
+/*                     MODULES/SLICES                       */
+/* -------------------------------------------------------- */
+
+    @import "modules/intro-module";
+    @import "modules/intro-text";
+    @import "modules/project-teaser";
+    @import "modules/content-text";
+    @import "modules/image";
+    

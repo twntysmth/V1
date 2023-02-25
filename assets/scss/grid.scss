@@ -1,0 +1,98 @@
+/* -------------------------------------------------------- */
+/*                 GRID BASEMENT CLASSES                    */
+/* -------------------------------------------------------- */
+
+.grid-wrap {
+    display: grid;
+    max-width: $grid-wrap-max-width;
+    margin: 0 auto;
+    z-index: $z-index-1;
+  
+    &.grid-wrap--dense {
+        grid-auto-flow: dense;
+    }
+  
+    .grid-wrap {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+@each $current-viewport,  $current-viewportwidth in $viewports {
+    @if $current-viewportwidth == 0px {
+  
+        .grid-wrap {
+            grid-template-columns: repeat(map-get(map-get($grid, #{$current-viewport}), columns), 1fr);
+            column-gap: map-get(map-get($grid, #{$current-viewport}), column-gap);
+            row-gap: map-get(map-get($grid, #{$current-viewport}), row-gap);
+            padding: 0 map-get(map-get($grid, #{$current-viewport}), wrap-outer-padding);
+        }
+  
+        @for $column from 1 through map-get(map-get($grid, #{$current-viewport}), columns){
+            .#{$current-viewport}#{$column}{
+                grid-column-end: span $column;
+            }
+  
+            .#{$current-viewport}-start-#{$column}{
+                grid-column-start: $column;
+            }
+  
+        }
+  
+        .#{$current-viewport}-full {
+            grid-column: span map-get(map-get($grid, #{$current-viewport}), columns);
+        }
+    
+        .#{$current-viewport}-start-auto {
+            grid-column-start: auto;
+        }
+    
+        .#{$current-viewport}-hidden {
+            display: none;
+        }
+  
+    } @else {
+        @media screen and (min-width: $current-viewportwidth) {
+  
+            .grid-wrap {
+                grid-template-columns: repeat(map-get(map-get($grid, #{$current-viewport}), columns), 1fr);
+                column-gap: map-get(map-get($grid, #{$current-viewport}), column-gap);
+                row-gap: map-get(map-get($grid, #{$current-viewport}), row-gap);
+                padding: 0 map-get(map-get($grid, #{$current-viewport}), wrap-outer-padding);
+            }
+    
+            @for $column from 1 through map-get(map-get($grid, #{$current-viewport}), columns){
+                .#{$current-viewport}#{$column} {
+                    grid-column-end: span $column;
+                }
+    
+                .#{$current-viewport}-start-#{$column}{
+                    grid-column-start: $column;
+                }
+    
+            }
+    
+            .#{$current-viewport}-full {
+                grid-column: span map-get(map-get($grid, #{$current-viewport}), columns);
+            }
+    
+            .#{$current-viewport}-start-auto {
+                grid-column-start: auto;
+            }
+    
+            .#{$current-viewport}-hidden {
+                display: none;
+            }
+    
+            .#{$current-viewport}-visible {
+                display: block;
+            }
+
+        }
+  
+    }
+  
+}
+  

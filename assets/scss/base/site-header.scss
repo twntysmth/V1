@@ -1,0 +1,227 @@
+// TODO finish site-header, site-footer, project-teser styling
+// TODO implement github and other icons to site-footer, site-header, project-teaser
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 5px 0;
+
+    .site-header__logo {
+
+    }
+
+    .site-header__navigation {
+
+        .site-header__navigation-trigger {
+            @include flex(row, wrap);
+            position: relative;
+            padding: 5px;
+            background-color: transparent;
+            border: 1px solid $color-orange;
+            z-index: $z-index-2;
+
+            span {
+                display: block;
+                width: 35px;
+                height: 2px;
+                margin: 5px auto;
+                background-color: $color-white;
+
+                &:nth-child(2){
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .site-header__navigation__menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            list-style: none;
+            transition: $transitionTime;
+
+            li {
+                margin: 0;
+            }
+        }
+
+        &.site-header__navigation-open {
+
+            .site-header__navigation-trigger {
+    
+                span {
+
+                    &:nth-child(1){
+
+                    }
+    
+                    &:nth-child(2){
+                        
+                    }
+    
+                    &:nth-child(3){
+                        
+                    }
+                }
+            }
+    
+            .site-header__navigation__menu {
+                display: block;
+    
+                li {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@include viewport(mw){
+    .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 5px 0;
+
+        .site-header__logo {
+
+        }
+
+        .site-header__navigation {
+
+            .site-header__navigation-trigger {
+                @include flex(row, wrap);
+                position: relative;
+                padding: 5px;
+                background-color: transparent;
+                border: 1px solid $color-orange;
+                z-index: $z-index-2;
+
+                span {
+                    display: block;
+                    width: 35px;
+                    height: 2px;
+                    margin: 5px auto;
+                    background-color: $color-white;
+
+                    &:nth-child(2){
+                        margin: 0 auto;
+                    }
+                }
+            }
+
+            .site-header__navigation__menu {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                list-style: none;
+                transition: $transitionTime;
+
+                li {
+                    margin: 0;
+                }
+            }
+
+            &.site-header__navigation-open {
+
+                .site-header__navigation-trigger {
+        
+                    span {
+
+                        &:nth-child(1){
+
+                        }
+        
+                        &:nth-child(2){
+                            
+                        }
+        
+                        &:nth-child(3){
+                            
+                        }
+                    }
+                }
+        
+                .site-header__navigation__menu {
+                    display: block;
+        
+                    li {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include viewport(lw){
+    .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 5px 0;
+
+        .site-header__logo {
+
+        }
+
+        .site-header__navigation {
+
+            .site-header__navigation-trigger {
+                display: none;
+            }
+
+            .site-header__navigation__menu {
+                @include flex(row, wrap);
+                justify-content: space-evenly;
+                position: static;
+
+                li {
+                    margin: 0;
+                }
+            }
+
+            &.site-header__navigation-open {
+
+                .site-header__navigation-trigger {
+        
+                    span {
+
+                        &:nth-child(1){
+
+                        }
+        
+                        &:nth-child(2){
+                            
+                        }
+        
+                        &:nth-child(3){
+                            
+                        }
+                    }
+                }
+        
+                .site-header__navigation__menu {
+                    display: block;
+        
+                    li {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

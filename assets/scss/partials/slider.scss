@@ -1,0 +1,59 @@
+.swiper {
+  .swiper-button-next,
+  .swiper-button-prev {
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: $color-white;
+    border: 1px solid $color-white;
+    font-size: 0;
+    transition: border ease $transitionTime;
+
+    &:hover {
+
+      &::after {
+        transform: translate(5px, 0);
+      }
+    }
+
+    &::after {
+      display: block;
+      transform: translate(0, 0);
+      width: 28px;
+      height: 15px;
+      margin: 16.5px auto;
+      background-image: url(/img/icons/arrow-right-green.svg);
+      background-size: cover;
+      transition: transform ease $transitionTime;
+      content: "";
+    }
+  }
+
+  .swiper-button-prev {
+    left: 0;
+    right: auto;
+
+    &:hover {
+
+      &::after {
+        transform: rotate(180deg) translate(5px, 0);
+      }
+    }
+
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 50px;
+    height: 4px;
+    border-radius: 2px;
+    background: transparent;
+    border: 1px solid $color-white;
+
+    &.swiper-pagination-bullet-active {
+      background: $color-white;
+    }
+  }
+}

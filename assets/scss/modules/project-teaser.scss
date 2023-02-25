@@ -1,0 +1,121 @@
+.project-teaser {
+    padding: 45px 0;
+
+    .project-teaser__content {
+        margin-bottom: 35px;
+
+        .project-teaser__content__subline {
+            color: $color-orange;
+            font-size: rem(16px);
+            font-weight: $font-weight-medium;
+            line-height: rem(32px);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .project-teaser__content__headline {
+            padding: 0;
+            margin-bottom: 25px;
+            font-size: rem(40px);
+            font-weight: $font-weight-extrabold;
+            line-height: rem(48px);
+        }
+
+        .button {
+            color: $color-white;
+            background-color: transparent;
+            font-size: rem(14px);
+            font-weight: $font-weight-heavy;
+            text-transform: uppercase;
+            border: 1px solid $color-verylightgrey;
+        }
+    }
+
+    .project-teaser__list {
+        @include flex(row, wrap);
+        list-style: none;
+
+        li {
+            padding: 30px 25px;
+            margin: 15px 0;
+            border: 1px solid $color-verylightgrey;
+            border-radius: 6px;
+
+            &:nth-child(3){
+                display: none;
+            }
+        }
+    }
+}
+
+@include viewport(mw){
+    .project-teaser {
+        padding: 60px 0;
+    
+        .project-teaser__content {
+            position: relative;
+            margin-bottom: 40px;
+    
+            .project-teaser__content__subline {
+            }
+    
+            .project-teaser__content__headline {
+                margin-bottom: 30px;
+                font-size: rem(48px);
+                line-height: rem(56px);
+                letter-spacing: -0.5px;
+            }
+    
+            .button {
+
+            }
+        }
+    
+        .project-teaser__list {
+            justify-content: space-evenly;
+            
+            li {
+                width: 45%;
+                padding: 35px 30px;
+            }
+        }
+    }
+}
+
+@include viewport(lw){
+    .project-teaser {
+        padding: 75px 0;
+    
+        .project-teaser__content {
+            margin-bottom: 55px;
+    
+            .project-teaser__content__subline {
+            }
+    
+            .project-teaser__content__headline {
+                margin-bottom: 0;
+                font-size: rem(56px);
+                line-height: rem(64px);
+                letter-spacing: -1px;
+            }
+    
+            .button {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    
+        .project-teaser__list {
+
+            li {
+                width: 30%;
+                padding: 40px 35px;
+
+                &:nth-child(3){
+                    display: block;
+                }
+            }
+        }
+    }
+}

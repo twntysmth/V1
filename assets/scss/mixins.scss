@@ -1,0 +1,122 @@
+/* -------------------------------------------------------- */
+/*                PLUG AND PLAY STYLE MIXINS                */
+/* -------------------------------------------------------- */
+
+// DEFINING THE MEDIA VIEWPORT
+@mixin viewport($viewportName){
+    @media screen and (min-width: map-get($viewports, $viewportName)){
+        @content;
+    }
+
+}
+  
+@mixin manual-viewport($minWidth){
+    @media screen and (min-width: $minWidth){
+        @content;
+    }
+
+}
+
+// ADD FLEX POWER
+@mixin flex($direction: row, $wrap: nowrap){
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  
+    @if $direction == row-reverse {
+        -webkit-box-direction: reverse;
+        -webkit-box-orient: horizontal;
+        -moz-box-direction: reverse;
+        -moz-box-orient: horizontal;
+    } @else if $direction == column {
+        -webkit-box-direction: normal;
+        -webkit-box-orient: vertical;
+        -moz-box-direction: normal;
+        -moz-box-orient: vertical;
+    } @else if $direction == column-reverse {
+        -webkit-box-direction: reverse;
+        -webkit-box-orient: vertical;
+        -moz-box-direction: reverse;
+        -moz-box-orient: vertical;
+    } @else {
+        -webkit-box-direction: normal;
+        -webkit-box-orient: horizontal;
+        -moz-box-direction: normal;
+        -moz-box-orient: horizontal;
+    }
+  
+    -webkit-flex-direction: $direction;
+    -ms-flex-direction: $direction;
+    flex-direction: $direction;
+    -webkit-flex-wrap: $wrap;
+    
+    @if $wrap == nowrap {
+        -ms-flex-wrap: none;
+    } @else {
+        -ms-flex-wrap: $wrap;
+    }
+
+    flex-wrap: $wrap;
+}
+
+@mixin ul-list-style(){
+
+    li {
+        position: relative;
+        margin-left: 25px;
+        list-style: none;
+  
+        & + li {
+            margin-top: 10px;
+        }
+  
+        &::before {
+            position: absolute;
+            top: 4px;
+            left: -26px;
+            width: 15px;
+            height: 15px;
+            //  background-image: url(/img/bulletpoint.svg);
+            background-size: cover;
+            content: "";
+        }
+  
+        p {
+            display: inline;
+        }
+
+    }
+  
+    @include viewport(mw){
+  
+        li {
+            margin-left: 30px;
+  
+            & + li {
+                margin-top: 19px;
+            }
+  
+            &::before {
+                top: 8px;
+                left: -31px;
+            }
+        }
+  
+    }
+
+}
+  
+@mixin smooth-fading-effect($transitionStyle: ease-in-out){
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity $transitionTime $transitionStyle;
+    transition-delay: $transitionTime, 0s;
+  
+    &.show {
+        visibility: visible;
+        opacity: 1;
+        transition-delay: 0s, 0s;
+    }
+    
+}

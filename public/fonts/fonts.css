@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('/fonts/opensans/Open-Sans-300.eot');
+    src: url('/fonts/opensans/Open-Sans-300.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/opensans/Open-Sans-300.woff2') format('woff2'),
+    url('/fonts/opensans/Open-Sans-300.woff') format('woff'),
+    url('/fonts/opensans/Open-Sans-300.ttf') format('truetype'),
+    url('/fonts/opensans/Open-Sans-300.svg#OpenSans') format('svg');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/opensans/Open-Sans-Regular.eot');
+    src: url('/fonts/opensans/Open-Sans-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/opensans/Open-Sans-Regular.woff2') format('woff2'),
+    url('/fonts/opensans/Open-Sans-Regular.woff') format('woff'),
+    url('/fonts/opensans/Open-Sans-Regular.ttf') format('truetype'),
+    url('/fonts/opensans/Open-Sans-Regular.svg#OpenSans') format('svg');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('/fonts/opensans/Open-Sans-600.eot');
+    src: url('/fonts/opensans/Open-Sans-600.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/opensans/Open-Sans-600.woff2') format('woff2'),
+    url('/fonts/opensans/Open-Sans-600.woff') format('woff'),
+    url('/fonts/opensans/Open-Sans-600.ttf') format('truetype'),
+    url('/fonts/opensans/Open-Sans-600.svg#OpenSans') format('svg');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/fonts/opensans/Open-Sans-700.eot');
+    src: url('/fonts/opensans/Open-Sans-700.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/opensans/Open-Sans-700.woff2') format('woff2'),
+    url('/fonts/opensans/Open-Sans-700.woff') format('woff'),
+    url('/fonts/opensans/Open-Sans-700.ttf') format('truetype'),
+    url('/fonts/opensans/Open-Sans-700.svg#OpenSans') format('svg');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/montserrat/Montserrat-Regular.eot');
+    src: url('/fonts/montserrat/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/montserrat/Montserrat-Regular.woff2') format('woff2'),
+    url('/fonts/montserrat/Montserrat-Regular.woff') format('woff'),
+    url('/fonts/montserrat/Montserrat-Regular.ttf') format('truetype'),
+    url('/fonts/montserrat/Montserrat-Regular.svg#Montserrat') format('svg');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('/fonts/montserrat/Montserrat-600.eot');
+    src: url('/fonts/montserrat/Montserrat-600.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/montserrat/Montserrat-600.woff2') format('woff2'),
+    url('/fonts/montserrat/Montserrat-600.woff') format('woff'),
+    url('/fonts/montserrat/Montserrat-600.ttf') format('truetype'),
+    url('/fonts/montserrat/Montserrat-600.svg#Montserrat') format('svg');
+}
+
+

@@ -1,0 +1,48 @@
+.site-footer {
+    padding: 60px 0;
+    border-top: 1px solid $color-verylightgrey;
+
+    strong {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    ul {
+        list-style: none;
+
+        li {
+            margin: 0;
+            text-align: center;
+        }
+    }
+
+    .site-footer__navigation {
+
+        .site-footer__navigation__subline {
+
+        }
+
+        .site-footer__navigation__list {
+
+        }
+    }
+
+    .site-footer__socials {
+
+        .site-footer__socials__subline {
+
+        }
+
+        .site-footer__socials__list {
+
+        }
+    }
+
+    .site-footer__legal {
+
+        .site-footer__legal__list {
+
+        }
+    }
+}

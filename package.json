@@ -1,0 +1,31 @@
+{
+  "name": "storyblok_template",
+  "version": "1.0.0",
+  "description": "Get instant started with Storyblok and Nuxt 3 for fast Development",
+  "author": "Calvin Kamp",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/image-edge": "^1.0.0-27919678.2f5b64b",
+    "nuxt": "^3.2.2",
+    "sass": "^1.58.2",
+    "storyblok-js-client": "^5.4.2"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.6",
+    "@storyblok/nuxt": "^5.1.0",
+    "@swoga/vue-collapsible-panel": "^0.3.0",
+    "click-outside-vue3": "^4.0.1",
+    "npm": "^9.5.0",
+    "nuxt-jsonld": "^2.0.7",
+    "pinia": "^2.0.30",
+    "swiper": "^9.0.5",
+    "vue-scrollto": "^2.20.0"
+  }
+}
